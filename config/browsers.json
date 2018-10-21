@@ -3,9 +3,9 @@
 		"default": "latest",
 		"versions": {
 			"latest": {
-				"image": "selenoid/chrome",
+				"image": ["/Users/artempostol/Documents/chromedriver/chromedriver"],
 				"port": "4444",
-				"path": "/Users/artempostol/Documents/chromedriver/chromedriver",
+				"path": "/",
 				"tmpfs": {"/tmp":"size=512m"}
 			}
 		}
