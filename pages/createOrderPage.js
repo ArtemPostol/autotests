@@ -46,10 +46,7 @@ module.exports = {
 
         paperInstructionsField: '#order_description',
 
-        bestWriterCheckBox:{
-            selector: '.b-checkbox_best-writer .b-checkbox__box',
-            locateStrategy: 'css'
-        }
+        bestWriterCheckBox: '.b-checkbox_best-writer .b-checkbox__box',
 
     },
 

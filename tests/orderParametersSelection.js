@@ -109,7 +109,7 @@ module.exports = {
 
 
         createOrderPage
-            .click('@goToStep3Btn')
+           // .click('@goToStep3Btn')
             .click('@goToStep3Btn')
             .expect.element('@paperInstructionsField').to.be.visible.before(1000);
         //Пользователь перешел на 3й шаг ордер формы
@@ -130,7 +130,7 @@ module.exports = {
 
             createOrderPage
                 .click('@bestWriterCheckBox')
-               // .expect.element('@bestWriterCheckBox').to.be.selected.before(1000);
+                .expect.element('#order_vas_co_1').to.be.selected.before(1000);
 
             // проверка что значение поле Select your subject было выбрано
         },
