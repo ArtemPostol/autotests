@@ -46,7 +46,58 @@ module.exports = {
 
         paperInstructionsField: '#order_description',
 
+
+        editingRadioBtn: {
+            selector: '//span[contains(text(), "Editing")]',
+            locateStrategy: 'xpath'
+        },
+        editingRadioBtnInput: '#order_product_service_3',
+
+        editingRewritingBtn: {
+            selector: '//span[contains(text(), "Rewriting")]',
+            locateStrategy: 'xpath'
+        },
+        editingRewritingBtnInput: '#order_product_service_2',
+
+        editingWritingFromScratchBtn: {
+            selector: '//span[contains(text(), "Writing from scratch")]',
+            locateStrategy: 'xpath'
+        },
+        editingWritingFromScratchInput: '#order_product_service_1',
+
+
+
         bestWriterCheckBox: '.b-checkbox_best-writer .b-checkbox__box',
+        bestWriterCheckInput: '#order_vas_co_1',
+
+        preferredWritersCheckBox: '.b-checkbox_size_l .b-checkbox__box',
+
+        preferredWritersCheckInput: {
+            selector: '//input [@class=js_rel_wr_checkbox b-checkbox__control js_hire_writer_request_ga]',
+            locateStrategy: 'xpath'
+        },
+
+        platinumRadioBtn: {
+            selector: '//span[contains(text(), "Platinum")]',
+            locateStrategy: 'xpath'
+        },
+
+        platinumRadioInput: '#order_product_wrlevel_3',
+
+        premiumRadioBtn: {
+            selector: '//span[contains(text(), "Premium")]',
+            locateStrategy: 'xpath'
+        },
+
+        premiumRadioInput: '#order_product_wrlevel_2',
+
+        standardRadioBtn: {
+            selector: '//span[contains(text(), "Standard")]',
+            locateStrategy: 'xpath'
+        },
+
+        standardRadioInput: '#order_product_wrlevel_1',
+
 
     },
 

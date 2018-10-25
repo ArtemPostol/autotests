@@ -82,6 +82,54 @@ module.exports = {
 
     },
 
+    'Пользователь выбрал радиобатон: Editing': (browser) => {
+        let createOrderPage = browser.page.createOrderPage();
+
+        createOrderPage
+            .click('@editingRadioBtn')
+            .expect.element('@editingRadioBtnInput').to.be.selected.before(1000);
+    },
+
+    'Пользователь выбрал радиобатон: Rewriting': (browser) => {
+        let createOrderPage = browser.page.createOrderPage();
+
+        createOrderPage
+            .click('@editingRewritingBtn')
+            .expect.element('@editingRewritingBtnInput').to.be.selected.before(1000);
+    },
+
+    'Пользователь выбрал радиобатон: Writing from scratch': (browser) => {
+        let createOrderPage = browser.page.createOrderPage();
+
+        createOrderPage
+            .click('@editingWritingFromScratchBtn')
+            .expect.element('@editingWritingFromScratchInput').to.be.selected.before(1000);
+    },
+
+    'Пользователь выбрал радиобатон: Platinum': (browser) => {
+        let createOrderPage = browser.page.createOrderPage();
+
+        createOrderPage
+            .click('@platinumRadioBtn')
+            .expect.element('@platinumRadioInput').to.be.selected.before(1000);
+    },
+
+    'Пользователь выбрал радиобатон: Premium': (browser) => {
+        let createOrderPage = browser.page.createOrderPage();
+
+        createOrderPage
+            .click('@premiumRadioBtn')
+            .expect.element('@premiumRadioInput').to.be.selected.before(1000);
+    },
+
+    'Пользователь выбрал радиобатон: Standard': (browser) => {
+        let createOrderPage = browser.page.createOrderPage();
+
+        createOrderPage
+            .click('@standardRadioBtn')
+            .expect.element('@standardRadioInput').to.be.selected.before(1000);
+    },
+
     'Пользователь заполнил поле заказа: Number of cited resources': (browser) => {
         let createOrderPage = browser.page.createOrderPage();
 
@@ -109,32 +157,40 @@ module.exports = {
 
 
         createOrderPage
-           // .click('@goToStep3Btn')
+            .click('@goToStep3Btn')
             .click('@goToStep3Btn')
             .expect.element('@paperInstructionsField').to.be.visible.before(1000);
         //Пользователь перешел на 3й шаг ордер формы
     },
 
-        'Пользователь заполнил поле заказа: Paper instructions ': (browser) => {
-            let createOrderPage = browser.page.createOrderPage();
+    'Пользователь заполнил поле заказа: Paper instructions ': (browser) => {
+        let createOrderPage = browser.page.createOrderPage();
 
-            createOrderPage
-                .setValue('@paperInstructionsField', 'Some Instructions')
-                .expect.element('@paperInstructionsField').to.have.value.that.equals('Some Instructions').before(10000);
+        createOrderPage
+            .setValue('@paperInstructionsField', 'Some Instructions')
+            .expect.element('@paperInstructionsField').to.have.value.that.equals('Some Instructions').before(10000);
 
-            // проверка что значение поле Paper instructions равно новому значению
+        // проверка что значение поле Paper instructions равно новому значению
         },
+
+       'Пользователь выбрал чек-бокс: Preferred Writers': (browser) => {
+        let createOrderPage = browser.page.createOrderPage();
+
+        createOrderPage
+            .click('@preferredWritersCheckBox')
+           // .expect.element('@preferredWritersCheckInput').to.be.selected.before(1000);
+
+        // проверка что значение поле Select your subject было выбрано
+    },
 
         'Пользователь выбрал чек-бокс: We select the writer for you ': (browser) => {
             let createOrderPage = browser.page.createOrderPage();
 
             createOrderPage
                 .click('@bestWriterCheckBox')
-                .expect.element('#order_vas_co_1').to.be.selected.before(1000);
+                .expect.element('@bestWriterCheckInput').to.be.selected.before(1000);
 
             // проверка что значение поле Select your subject было выбрано
         },
-
-
 
 };
