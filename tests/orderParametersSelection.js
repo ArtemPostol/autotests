@@ -61,21 +61,11 @@ module.exports = {
 
         // проверка что значение  Number of pages соответствует выбраному значению
     },
-/*
-    'Пользователь изменил значение: Deadline ': (browser) => {
-        let createOrderPage = browser.page.createOrderPage();
-
-        createOrderPage
-            .click('@orderDeadlineDate')
-    },
-
-*/
 
     'Пользователь кликнул на кнопку:  go to step 2/3 ': (browser) => {
         let createOrderPage = browser.page.createOrderPage();
 
         createOrderPage
-
             .click('@goToStep2Btn')
 
         //Пользователь перешел на 2й шаг ордер формы
@@ -88,6 +78,9 @@ module.exports = {
         createOrderPage
             .click('@editingRadioBtn')
             .expect.element('@editingRadioBtnInput').to.be.selected.before(1000);
+
+        // Был выбран радиобатон Editing
+
     },
 
     'Пользователь выбрал радиобатон: Rewriting': (browser) => {
@@ -96,6 +89,9 @@ module.exports = {
         createOrderPage
             .click('@editingRewritingBtn')
             .expect.element('@editingRewritingBtnInput').to.be.selected.before(1000);
+
+        // Был выбран радиобатон Rewriting
+
     },
 
     'Пользователь выбрал радиобатон: Writing from scratch': (browser) => {
@@ -104,6 +100,8 @@ module.exports = {
         createOrderPage
             .click('@editingWritingFromScratchBtn')
             .expect.element('@editingWritingFromScratchInput').to.be.selected.before(1000);
+
+        // Был выбран радиобатон Writing from scratch
     },
 
     'Пользователь выбрал радиобатон: Platinum': (browser) => {
@@ -112,6 +110,9 @@ module.exports = {
         createOrderPage
             .click('@platinumRadioBtn')
             .expect.element('@platinumRadioInput').to.be.selected.before(1000);
+
+        // Был выбран радиобатон Platinum
+
     },
 
     'Пользователь выбрал радиобатон: Premium': (browser) => {
@@ -120,6 +121,9 @@ module.exports = {
         createOrderPage
             .click('@premiumRadioBtn')
             .expect.element('@premiumRadioInput').to.be.selected.before(1000);
+
+        // Был выбран радиобатон Premium
+
     },
 
     'Пользователь выбрал радиобатон: Standard': (browser) => {
@@ -128,6 +132,8 @@ module.exports = {
         createOrderPage
             .click('@standardRadioBtn')
             .expect.element('@standardRadioInput').to.be.selected.before(1000);
+
+        // Был выбран радиобатон Standard
     },
 
     'Пользователь заполнил поле заказа: Number of cited resources': (browser) => {
@@ -138,6 +144,7 @@ module.exports = {
             .setValue('@numberOfCited', 6)
             .expect.element('@numberOfCited').to.have.value.that.equals(6).before(1000);
 
+        // Значение поля Number of cited resources было измененно
 
     },
 
@@ -158,8 +165,8 @@ module.exports = {
 
         createOrderPage
             .click('@goToStep3Btn')
-            .click('@goToStep3Btn')
             .expect.element('@paperInstructionsField').to.be.visible.before(1000);
+
         //Пользователь перешел на 3й шаг ордер формы
     },
 
@@ -178,7 +185,7 @@ module.exports = {
 
         createOrderPage
             .click('@preferredWritersCheckBox')
-           // .expect.element('@preferredWritersCheckInput').to.be.selected.before(1000);
+            .expect.element('@preferredWritersCheckInput').to.be.selected.before(1000);
 
         // проверка что значение поле Select your subject было выбрано
     },

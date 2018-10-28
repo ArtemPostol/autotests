@@ -59,7 +59,8 @@
         "browserName": "firefox"
       },
       "globals" : {
-        "myGlobal" : "some_sauce_global"
+        "myGlobal" : "some_sauce_global",
+        "waitForConditionTimeout": 10000
       },
       "selenium" : {
         "start_process" : false

@@ -73,7 +73,7 @@ module.exports = {
         preferredWritersCheckBox: '.b-checkbox_size_l .b-checkbox__box',
 
         preferredWritersCheckInput: {
-            selector: '//input [@class=js_rel_wr_checkbox b-checkbox__control js_hire_writer_request_ga]',
+            selector: '//input [@tabindex=0]',
             locateStrategy: 'xpath'
         },
 
